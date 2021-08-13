@@ -2,14 +2,15 @@
 
 ![Dollar Bill (Image)](assets/one_dollar_bill.jpg)
 
-## The Mission
-
-*Are you able to predict the income of every US citizen?*
-
 
 ## The Data
 
 The datasets `data_train.csv` and `data_test.csv` 
+
+
+## The Mission
+
+*Are you able to predict the income of every US citizen?*
 
 ### Constraints
 
@@ -27,3 +28,4 @@ The datasets `data_train.csv` and `data_test.csv`
 - Hyper parameter tuning
 - Some type of validation strategy
 
+## US Income Prediction & Model Evaluation
