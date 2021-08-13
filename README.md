@@ -59,7 +59,7 @@ Evaluating the model on the testing set yields an accuracy of 85.30%
  [ 1518  2328]]
 
 * Classification Report<br/>
- ![classif report (Image)](assets/default_report.png)
+ ![classif report (Image)](assets/default_report.PNG)
  
  * ROC-AUC Curve<br/>
  ![roc curve(Image)](assets/default_roc.png)
@@ -103,7 +103,7 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 Evaluating the model on the training set yields an accuracy of 99.99%<br/>
 Evaluating the model on the testing set yields an accuracy of 85.99%<br/>
 
- ![results(Image)](assets/results_03.png)
+ ![results(Image)](assets/results_03.PNG)
  
 
 
