@@ -64,7 +64,7 @@ Evaluating the model on the testing set yields an accuracy of 85.30%
  * ROC-AUC Curve<br/>
  ![roc curve(Image)](assets/default_roc.png)
  
- * ROC-AUC Score: 0.7674289456499851
+ * ROC-AUC Score: 0.7674
  
 #### Step 2. Model Tuning
 
@@ -101,9 +101,9 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 
 ### Step 3: Results
 Evaluating the model on the training set yields an accuracy of 99.99%<br/>
-Evaluating the model on the testing set yields an accuracy of 85.99%<br/>
+Evaluating the model on the testing set yields an accuracy of **86.09%**<br/>
 
- ![results(Image)](assets/results_03.PNG)
+ ![results(Image)](assets/eval_results.PNG)
  
 
 
