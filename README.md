@@ -1,6 +1,6 @@
 # Model evaluation challenge - US Income
 
-![Dollar Bundles (Image)](assets/us-dollar-bundles.jpg)
+![Dollar Bill (Image)](assets/one_dollar_bill.jpg)
 
 ## The Mission
 
@@ -26,3 +26,4 @@ The datasets `data_train.csv` and `data_test.csv`
 - Multiple evaluation metrics
 - Hyper parameter tuning
 - Some type of validation strategy
+
