@@ -64,7 +64,7 @@ Evaluating the model on the testing set yields an accuracy of 85.30%
  ![classif report (Image)](assets/default_report.PNG)
  
  * ROC-AUC Curve<br/>
- ![roc curve(Image)](assets/default_roc.png)
+ ![roc curve(Image)](assets/default_roc_plot.png)
  
  * ROC-AUC Score: 0.7674
  
