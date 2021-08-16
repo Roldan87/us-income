@@ -60,7 +60,7 @@ display(cv)
 
 #Final model and results (metrics + roc plot)
 def evaluating_classifier(cv: RandomForestClassifier, X_train: pd.DataFrame, y_train: pd.DataFrame, X_test: pd.DataFrame, y_test: pd.DataFrame):
-    cv = RandomForestClassifier(n_estimators=100, max_depth=16, max_features='sqrt', criterion='gini').fit(X_train, y_train)
+    cv = RandomForestClassifier(n_estimators=250, max_depth=16, max_features='auto', criterion='gini').fit(X_train, y_train)
     #CrossValidation on training set
     scores = cross_val_score(cv, X_train, y_train, cv=5) # cv is the number of folds (k)
     print(scores)
