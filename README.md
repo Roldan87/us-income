@@ -85,8 +85,8 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 * Param_grid ={<br/>'n_estimators': [5,10,50,100,250],<br/> 'criterion': ['gini', 'entropy'],<br/> 'max_features': ['auto', 'sqrt', 'log2'],<br/> 'max_depth': [2,4,8,16,32,None]<br/>}
 * **Best Parameters: {criterion: 'gini','max_features': 'auto', 'n_estimators': 250, 'max_depth: 16}**
 
-### Step 3: Evaluating Results
-#### Model Run 5 times (Including CrossValidation)
+#### Step 3: Model Fit & Prediction
+##### Model Run 5 times (Including CrossValidation)
 
 **1st Run**
 <p align='center'>
@@ -143,21 +143,33 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
     <img src="assets/score_evo.PNG" width='820' height='560'>
 </p>
 
+#### Step 4: Resampling
+**Target samples unbalanced**<br/>
+Oversampled ('income' = 1)<br/>
+<p align='center'>
+    <img src='assets/oversample_run.PNG' width='600'>
+<p/>
+
 ### Conclusions
 
 * The Initial model showed:<br/>
 **Training set score: 99.99% (overfitting)**<br/>
 **Test set score: 85.30%**<br/>
-* The final model after tuning shows:<br/>
+* The Final model after tuning shows:<br/>
 **Max Training set score: 90.19%**<br/>
 **Max Test set score: 86.81%**<br/>
 **Max ROC-AUC Score: 0.7763**<br/>
+* The Resampled model shows:<br/>
+**Max Training set score: 89.57%**<br/>
+**Max Test set score: 86.39%**<br/>
+**Max ROC-AUC Score: 0.86**<br/>
 
 * Evaluation Techniques used:<br/>
 **train_test_split** - random_state=2, test_size=0.2, stratify=y<br/>
 **GridSearchCV** - best_params_<br/>
 ![best parameters (Image)](assets/best_param.PNG)
 **CrossValidation** - kfold = [4-8]<br/>
+**Resampling** - target ('income'=1)<br/>
 **Metrics** - Confusion Matrix / Classification Report / accuracy_score / ROC Curve / ROC-AUC score
 
 

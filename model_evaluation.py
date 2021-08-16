@@ -24,6 +24,10 @@ df_train, df_test = reading_csv_to_df(train_path, test_path)
 # Full dataset
 df_income = df_train.append(df_test)
 
+#Resample target (income = 1)
+#df_resample = df_income[df_income['income'] == 1]
+#df_final = df_income.append(df_resample)
+
 # Split dataset
 X = df_income.drop(columns=['income'])
 y = df_income['income']
