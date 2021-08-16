@@ -90,7 +90,7 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 
 **1st Run**
 <p align='center'>
-    <img src='assets/run_01.png' width='600'>
+    <img src='assets/run_01.PNG' width='600'>
 <p/>
 
 <p align='center'>
@@ -103,7 +103,7 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 <p/>
 
 <p align='center'>
-    <img src='assets/run_02b.png' width='600'>
+    <img src='assets/run_02b.PNG' width='600'>
 <p/>
 
 **3rd Run**
@@ -112,7 +112,7 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 <p/>
 
 <p align='center'>
-    <img src='assets/run_03b.png' width='600'>
+    <img src='assets/run_03b.PNG' width='600'>
 <p/>
 
 **4th Run** 
@@ -121,7 +121,7 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 <p/>
 
 <p align='center'>
-    <img src='assets/run_04b.png' width='600'>
+    <img src='assets/run_04b.PNG' width='600'>
 <p/>
 
 **5th Run** 
@@ -131,7 +131,7 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 <p/>
 
 <p align='center'>
-    <img src='assets/run_05b.png' width='600'>
+    <img src='assets/run_05b.PNG' width='600'>
 <p/>
 
 ### Evolution of Scores<br/>
