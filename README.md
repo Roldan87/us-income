@@ -68,42 +68,64 @@ Evaluating the model on the testing set yields an accuracy of 85.30%
  
 #### Step 2. Model Tuning
 
-#### Splitting Train-test: Random State
+#### Random State (train-test split)
 
 * random_state = [1,2,3,4]
 * Results:<br/>
 Evaluating the model on the testing set yields an accuracy of 85.76% with random state 0<br/>
 Evaluating the model on the testing set yields an accuracy of 85.71% with random state 1<br/>
-Evaluating the model on the testing set yields an accuracy of 85.99% with random state 2<br/>
+Evaluating the model on the testing set yields an accuracy of **85.99%** with **random state 2**<br/>
 Evaluating the model on the testing set yields an accuracy of 85.73% with random state 3<br/>
 
-##### Cross-Validation
-
-* cv = 5 (k=folds)
-* scores:<br/>
-    [0.8557968  0.85426055 0.86050799 0.85446538 0.85178736]<br/>
-    Accuracy: 85.54% (+/- 0.29)<br/>
-* cv = 7 (k=folds)
-* scores:<br/>
-    [0.85275986 0.85488959 0.86062518 0.86277603 0.85531976 0.85632349
-    0.8561801 ]<br/>
-    Accuracy: 85.70% (+/- 0.32)
-* cv = 9 (k=folds)
-* scores:<br/>
-    [0.85105991 0.8556682  0.85917051 0.85840708 0.86264749 0.85969764
-    0.85029499 0.85435103 0.85490413]<br/>
-    Accuracy: 85.62% (+/- 0.39)
 
 ##### GridSearchCV
 
-* Param_grid = {'n_estimators': [100,200,400,800], 'criterion': ['gini', 'entropy'], 'max_features: ['auto', 'sqrt', 'log2']}
-* Best Parameters: {criterion: 'gini','max_features': 'auto', 'n_estimators': 800}
+* Param_grid ={<br/>'n_estimators': [5,10,50,100,250],<br/> 'criterion': ['gini', 'entropy'],<br/> 'max_features': ['auto', 'sqrt', 'log2'],<br/> 'max_depth': [2,4,8,16,32,None]<br/>}
+* **Best Parameters: {criterion: 'gini','max_features': 'auto', 'n_estimators': 250, 'max_depth: 16}**
 
-### Step 3: Results
-Evaluating the model on the training set yields an accuracy of 99.99%<br/>
-Evaluating the model on the testing set yields an accuracy of **86.09%**<br/>
+### Step 3: Evaluating Results
+#### Model Run 5 times
 
- ![results(Image)](assets/eval_results.PNG)
+**1st Run:**
+
+<p align="center">
+    <img src='assets/run.PNG' width='575'>
+</p>
+
+
+**2nd Run:**
+
+<p align="center">
+    <img src='assets/run_02.PNG' width='575'>
+</p>
+
+
+**3rd Run:**
+
+<p align="center">
+    <img src='assets/run_03.PNG' width="575">
+</p>
+
+
+**4th Run:**
+
+<p align="center">
+    <img src='assets/run_04.PNG' width="575">
+</p>
+
+
+**5th Run:**
+
+<p align="center">
+    <img src='assets/run_05.PNG'width="575">
+</p>
+
+#### Evolution of Scores
+
+<p align="center">
+    <img src="assets/score_evo.PNG" width='820' height='560'>
+</p>
+
  
 
 
