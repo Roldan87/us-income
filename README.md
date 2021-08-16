@@ -54,6 +54,8 @@ The datasets `data_train.csv` and `data_test.csv`
 Evaluating the model on the training set yields an accuracy of 99.99%<br/>
 Evaluating the model on the testing set yields an accuracy of 85.30%
 
+**Note: The model shows overfitting**
+
 * Confusion Matrix<br/>
 [[11559   876]<br/>
  [ 1518  2328]]
@@ -84,52 +86,79 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 * **Best Parameters: {criterion: 'gini','max_features': 'auto', 'n_estimators': 250, 'max_depth: 16}**
 
 ### Step 3: Evaluating Results
-#### Model Run 5 times (Including TrainSet CrossValidation)
+#### Model Run 5 times (Including CrossValidation)
 
-**1st Run:**
+**1st Run**
+<p align='center'>
+    <img src='assets/run_01.png' width='600'>
+<p/>
 
-<p align="center">
-    <img src='assets/run.PNG' width='575'>
-</p>
+<p align='center'>
+    <img src='assets/run_01b.PNG' width='600'>
+<p/>
 
+**2nd Run**
+<p align='center'>
+    <img src='assets/run_02.PNG' width='600'>
+<p/>
 
-**2nd Run:**
+<p align='center'>
+    <img src='assets/run_02b.png' width='600'>
+<p/>
 
-<p align="center">
-    <img src='assets/run_02.PNG' width='575'>
-</p>
+**3rd Run**
+<p align='center'>
+    <img src='assets/run_03.PNG' width='600'>
+<p/>
 
+<p align='center'>
+    <img src='assets/run_03b.png' width='600'>
+<p/>
 
-**3rd Run:**
+**4th Run** 
+<p align='center'>
+    <img src='assets/run_04.PNG' width='600'>
+<p/>
 
-<p align="center">
-    <img src='assets/run_03.PNG' width="575">
-</p>
+<p align='center'>
+    <img src='assets/run_04b.png' width='600'>
+<p/>
 
+**5th Run** 
 
-**4th Run:**
+<p align='center'>
+    <img src='assets/run_05.PNG' width='600'>
+<p/>
 
-<p align="center">
-    <img src='assets/run_04.PNG' width="575">
-</p>
-
-
-**5th Run:**
-
-<p align="center">
-    <img src='assets/run_05.PNG'width="575">
-</p>
+<p align='center'>
+    <img src='assets/run_05b.png' width='600'>
+<p/>
 
 ### Evolution of Scores<br/>
-
-<p align="center">
-    <img src="assets/score_evo.PNG" width='820' height='560'>
-</p>
-
 **Legend:**<br/>
 <span style="color: blue;">**Blue = Training Set**</span><br/>
 <span style="color: red;">**Red = Test Set**</span><br/>
 <span style="color: green;">**Green = ROC-AUC Score**</span><br/>
+<p align="center">
+    <img src="assets/score_evo.PNG" width='820' height='560'>
+</p>
+
+### Conclusions
+
+* The Initial model shows:<br/>
+**Training set score: 99.99% (overfitting)**<br/>
+**Test set score: 85.30%**<br/>
+* The final model after tuning shows:<br/>
+**Max Training set score: 90.19%**<br/>
+**Max Test set score: 86.81%**<br/>
+
+* Evaluation Techniques used:<br/>
+**train_test_split** - random_state [1-4]<br/>
+**GridSearchCV** - best_params_<br/>
+![best parameters (Image)](assets/best_param.PNG)
+**CrossValidation** - kfold = [4-8]<br/>
+**Metrics** - Confusion Matrix / Classification Report / accuracy_score / ROC-AUC score
+
 
 
 
