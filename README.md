@@ -174,7 +174,7 @@ Oversampled ('income' = 1)<br/>
 
 #### Final Word<br/>
 After re-splitting dataset and applying the evaluation methods (hyperparameter tuning, Cross Validation, GridSearchCV) the model showed: 
-* No more **overfitting** in the training set. 
+* No more **overfitting** when training the model. 
 * The **accuracy score** in the *test set* only improved a bit, as well as the roc_auc_score.
 * The model can accurately predict *True Negative* (target = 0) but has more difficulty to predict *True Positive* (target = 1).
 
