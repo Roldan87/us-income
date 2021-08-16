@@ -131,6 +131,10 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 <span style="color: red;">**Test Set**</span><br/>
 <span style="color: green;">**ROC-AUC Score**</span><br/>
 
+![Blue text](Training Set)
+![Red text](Test Set)
+![Green text](ROC-AUC Score)
+
 
 
 
