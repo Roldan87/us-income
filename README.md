@@ -84,7 +84,7 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 * **Best Parameters: {criterion: 'gini','max_features': 'auto', 'n_estimators': 250, 'max_depth: 16}**
 
 ### Step 3: Evaluating Results
-#### Model Run 5 times
+#### Model Run 5 times (Including TrainSet CrossValidation)
 
 **1st Run:**
 
@@ -120,14 +120,16 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
     <img src='assets/run_05.PNG'width="575">
 </p>
 
-#### Evolution of Scores
+### Evolution of Scores<br/>
 
 <p align="center">
     <img src="assets/score_evo.PNG" width='820' height='560'>
 </p>
 
- 
-
+**Legend:**<br/>
+<span style="color: blue;">**Training Set**</span><br/>
+<span style="color: red;">**Test Set**</span><br/>
+<span style="color: green;">**ROC-AUC Score**</span><br/>
 
 
 
