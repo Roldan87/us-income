@@ -145,19 +145,20 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 
 ### Conclusions
 
-* The Initial model shows:<br/>
+* The Initial model showed:<br/>
 **Training set score: 99.99% (overfitting)**<br/>
 **Test set score: 85.30%**<br/>
 * The final model after tuning shows:<br/>
 **Max Training set score: 90.19%**<br/>
 **Max Test set score: 86.81%**<br/>
+**Max ROC-AUC Score: 0.7763**<br/>
 
 * Evaluation Techniques used:<br/>
-**train_test_split** - random_state [1-4]<br/>
+**train_test_split** - random_state=2, test_size=0.2, stratify=y<br/>
 **GridSearchCV** - best_params_<br/>
 ![best parameters (Image)](assets/best_param.PNG)
 **CrossValidation** - kfold = [4-8]<br/>
-**Metrics** - Confusion Matrix / Classification Report / accuracy_score / ROC-AUC score
+**Metrics** - Confusion Matrix / Classification Report / accuracy_score / ROC Curve / ROC-AUC score
 
 
 
