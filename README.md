@@ -127,13 +127,11 @@ Evaluating the model on the testing set yields an accuracy of 85.73% with random
 </p>
 
 **Legend:**<br/>
-<span style="color: blue;">**Training Set**</span><br/>
-<span style="color: red;">**Test Set**</span><br/>
-<span style="color: green;">**ROC-AUC Score**</span><br/>
+<span style="color: blue;">**Blue = Training Set**</span><br/>
+<span style="color: red;">**Red = Test Set**</span><br/>
+<span style="color: green;">**Green = ROC-AUC Score**</span><br/>
 
-![Blue text](Training Set)
-![Red text](Test Set)
-![Green text](ROC-AUC Score)
+
 
 
 
