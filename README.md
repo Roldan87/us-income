@@ -150,7 +150,7 @@ Oversampled ('income' = 1)<br/>
     <img src='assets/oversample_run.PNG' width='600'>
 <p/>
 
-### Conclusions
+### Final Conclusions & Results
 
 * The Initial model showed:<br/>
 **Training set score: 99.99% (overfitting)**<br/>
@@ -164,7 +164,7 @@ Oversampled ('income' = 1)<br/>
 **Max Test set score: 86.39%**<br/>
 **Max ROC-AUC Score: 0.86**<br/>
 
-* Evaluation Techniques used:<br/>
+#### Evaluation Techniques used:<br/>
 **train_test_split** - random_state=2, test_size=0.2, stratify=y<br/>
 **GridSearchCV** - best_params_<br/>
 ![best parameters (Image)](assets/best_param.PNG)
@@ -172,6 +172,19 @@ Oversampled ('income' = 1)<br/>
 **Resampling** - target ('income'=1)<br/>
 **Metrics** - Confusion Matrix / Classification Report / accuracy_score / ROC Curve / ROC-AUC score
 
+#### Final Word<br/>
+After re-splitting dataset and applying the evaluation methods (hyperparameter tuning, Cross Validation, GridSearchCV) the model showed: 
+* No more **overfitting** in the training set. 
+* The **accuracy score** in the *test set* only improved a bit, as well as the roc_auc_score.
+* The model can accurately predict *True Negative* (target = 0) but has more difficulty to predict *True Positive* (target = 1).
+
+After **oversample** the target, the results showed:
+* Better Prediction Accuracy for both *True Negative* (0) and *True Positive* (1).
+* The *training set* accuracy decreased.
+* The *test set* accuracy improved compared to baseline but not compare to first model.
+* The roc_auc_score improved quite a lot.
+
+Excellent **BeCode** challenge to gain knowledge and sharpen skills regarding **model evaluation for machine learning systems**.
 
 
 
