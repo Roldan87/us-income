@@ -59,7 +59,7 @@ display(cv)
 
 
 #Final model and results (metrics + roc plot)
-def evaluating_classifier(cv: RandomForestClassifier, X_train: pd.DataFrame, y_train: pd.DataFrame, X_test: pd.DataFrame, y_test: pd.DataFrame):
+def evaluating_classifier(X_train: pd.DataFrame, y_train: pd.DataFrame, X_test: pd.DataFrame, y_test: pd.DataFrame):
     cv = RandomForestClassifier(n_estimators=250, max_depth=16, max_features='auto', criterion='gini').fit(X_train, y_train)
     #CrossValidation on training set
     scores = cross_val_score(cv, X_train, y_train, cv=5) # cv is the number of folds (k)
@@ -100,16 +100,15 @@ def evaluating_classifier(cv: RandomForestClassifier, X_train: pd.DataFrame, y_t
     print("Evaluating the model on the testing set yields an accuracy of {:.2f}%".format(test_score_evolution*100))
     return roc_evolution, train_score_evolution, test_score_evolution
 
-#Split dataset again (different random_state)
-X_train, X_test, y_train, y_test = train_test_split(X,y, random_state=2, test_size=0.2, stratify=y)
-
 # Follow-up on Scores
 train_score_evolution = []
 test_score_evolution = []
 roc_evolution = []
 # Run 5 times the model (CV and fit)
-for i in range(1,6):
-    roc_evo, train_score_evo, test_score_evo = evaluating_classifier(cv, X_train, y_train, X_test, y_test)
+for i in range(5):
+    #Split dataset again (different random_state)
+    X_train, X_test, y_train, y_test = train_test_split(X,y, random_state=i, test_size=0.2, stratify=y)
+    roc_evo, train_score_evo, test_score_evo = evaluating_classifier(X_train, y_train, X_test, y_test)
     roc_evolution.append(roc_evo)
     train_score_evolution.append(train_score_evo)
     test_score_evolution.append(test_score_evo)
